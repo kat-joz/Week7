@@ -6,6 +6,11 @@ import Addition2 from './Addition';
 import TrainerInfo from './information';
 import SalarySlip from './salary';
 import MyResult from './results';
+import Children from './children';
+import Records from './records';
+import Records2 from './records2';
+import Events from './events';
+import Data from './data';
 
 function App() {
   return (
@@ -23,6 +28,17 @@ function App() {
   <SalarySlip name="Kasia" salary="2000"/>
   <br/>
   <MyResult name="Kasia" physics="60" chemistry="50" maths="100"/>
+  <br/>
+  <Children> Hello Children </Children>
+  <br/>
+  <Records/>
+  <br/>
+  <Records2/>
+  <br/>
+  <Events/>
+  <br/>
+  <br/>
+  <Data/>
 
   </>
   )
