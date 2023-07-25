@@ -5,7 +5,7 @@ import Address1 from './Address';
 import Addition2 from './Addition';
 import TrainerInfo from './information';
 import SalarySlip from './salary';
-import Result from '.results';
+import MyResult from './results';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
   <br/>
   <SalarySlip name="Kasia" salary="2000"/>
   <br/>
-  <Result name="Kasia" physics="60" chemistry="50" maths ="60"/>
+  <MyResult name="Kasia" physics="60" chemistry="50" maths="100"/>
 
   </>
   )

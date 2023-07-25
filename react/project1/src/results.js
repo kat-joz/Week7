@@ -1,6 +1,6 @@
-function Result (props){
+function MyResult (props){
 
-    let total = physics+chemistry+maths
+    let total = parseInt(props.physics) + parseInt(props.chemistry) + parseInt(props.maths)
     let percentage = total*100/300
       let result = ""
       if (percentage >= 90){
@@ -13,8 +13,10 @@ function Result (props){
         result="C"}
         else{
         result="Fail"}
-    return(
+    return (
         <div>
+            <h2>Results:</h2>
+
             Name:<b> {props.name} </b>
             <br/>
             Physics:<b> {props.physics} </b>
@@ -25,11 +27,11 @@ function Result (props){
             <br/>
             Total Marks:<b> {total} </b>
             <br/>
-            Percentage:<b> {percentage} </b>
+            Percentage:<b> {percentage}% </b>
             <br/>
             Result:<b> {result} </b>
         </div>
     )
 }
 
-export default Result;
+export default MyResult;
