@@ -3,7 +3,6 @@ import {useState} from 'react';
 function WebData(){
 
     let[records, setRecords]=useState([])
-    //let[filteredData,setFilteredData] = useState(allData)
 
     function getDataFromResponse(data){
         setRecords(data)
@@ -13,21 +12,20 @@ function WebData(){
         jsonPromise.then(getDataFromResponse)
     }
 
-    let responsePromise = fetch('http://jsonplaceholder.typicode.com/comments')
-    responsePromise.then(processResponse)
-
     
     function search(){
-      //  searchByID((records) => {
+        let id = document.getElementById("query").value
+        let url = "http://jsonplaceholder.typicode.com/posts/"+id+"/comments"
 
-
-        //})
+        let responsePromise = fetch (url)
+        responsePromise.then(processResponse)
+ 
     }
     
 
     return(
         <>
-        <h1> Table for json placeholders </h1>
+        <h1> Type in a number to view comments: </h1>
         <input type="search" id="query" name="q" placeholder="Search..."/>
         <input type="button" value="search" onClick={search}/>
         <table>

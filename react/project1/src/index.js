@@ -9,6 +9,8 @@ import Team from './team';
 import Services from './services';
 import AboutUs from './aboutus';
 import Footer from './footer';
+import WebData from './webdata';
+import Comments from './comments';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -21,6 +23,8 @@ root.render(
         <li><Link to="/aboutus"> About us </Link></li>
         <li><Link to="/services"> Services </Link></li>
         <li><Link to="/myteam"> Team </Link></li>
+        <li><Link to="/comments"> Comments </Link></li>
+        <li><Link to="/commentsByPost"> Comments by post </Link></li>
       </ul>
     </nav>
     <Routes>
@@ -28,6 +32,8 @@ root.render(
       <Route path="/myteam" element={<Team/>} />
       <Route path="/aboutus" element={<AboutUs/>} />
       <Route path="/services" element={<Services/>} />
+      <Route path="/comments" element={<WebData/>} />
+      <Route path="/commentsByPost" element={<Comments/>} />
     </Routes>
     <Footer/>
   </BrowserRouter>
