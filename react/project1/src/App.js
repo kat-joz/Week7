@@ -11,6 +11,8 @@ import Records from './records';
 import Records2 from './records2';
 import Events from './events';
 import Data from './data';
+import WebData from './webdata';
+
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
   <br/>
   <br/>
   <Data/>
+  <br/>
+  <WebData/>
 
   </>
   )

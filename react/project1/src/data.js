@@ -21,13 +21,14 @@ function Data(){
     ]
     
     function addEmployee(){
-        records.push({
+        setEmployees((oldRecords) => {
+            let newRecord = {
             "name":"Mariusz",
             "dept":"IT",
-            "salary":3500
-        })
+            "salary":3500}
+            return [...oldRecords,newRecord]
 
-        setEmployees(records)
+        })
     }
 
     let [employees,setEmployees]=useState(records)
