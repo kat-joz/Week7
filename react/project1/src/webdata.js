@@ -3,6 +3,7 @@ import {useState} from 'react';
 function WebData(){
 
     let[records, setRecords]=useState([])
+    //let[filteredData,setFilteredData] = useState(allData)
 
     function getDataFromResponse(data){
         setRecords(data)
@@ -15,9 +16,14 @@ function WebData(){
     let responsePromise = fetch('http://jsonplaceholder.typicode.com/comments')
     responsePromise.then(processResponse)
 
+    
     function search(){
-        
+      //  searchByID((records) => {
+
+
+        //})
     }
+    
 
     return(
         <>
